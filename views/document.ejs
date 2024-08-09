@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Documentation</title>
+    
+    
+</head>
+<body>
+    <h1>API Documentation</h1>
+    
+    <h2>GET /image</h2>
+    <p>Fetch a random image related to the search term from Pixabay.</p>
+    <h3>Query Parameters:</h3>
+    <ul>
+        <li><strong>image</strong> (string): The search term for the image you want to fetch.</li>
+    </ul>
+
+    <h3>Example Request:</h3>
+    <pre><code>GET /image?image=mountain</code></pre>
+
+    <h3>Example Response:</h3>
+    <pre><code>
+{
+    "id": 195893,
+    "pageURL": "https://pixabay.com/en/blossom-bloom-flower-195893/",
+    "type": "photo",
+    "tags": "blossom, bloom, flower",
+    "previewURL": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_150.jpg",
+    "previewWidth": 150,
+    "previewHeight": 84,
+    "webformatURL": "https://pixabay.com/get/35bbf209e13e39d2_640.jpg",
+    "webformatWidth": 640,
+    "webformatHeight": 360,
+    "largeImageURL": "https://pixabay.com/get/ed6a99fd0a76647_1280.jpg",
+    "imageWidth": 4000,
+    "imageHeight": 2250,
+    "imageSize": 4731420,
+    "views": 7671,
+    "downloads": 6439,
+    "favorites": 1,
+    "likes": 5,
+    "comments": 2,
+    "user_id": 48777,
+    "user": "Josch13",
+    "userImageURL": "https://cdn.pixabay.com/user/2018/05/02/23-20-03-123_250x250.jpg"
+}
+    </code></pre>
+
+    <h3>Error Responses:</h3>
+    <ul>
+        <li><code>{ "error": "Please enter a valid text." }</code> - If the `image` parameter is missing or empty.</li>
+        <li><code>{ "error": "No images found." }</code> - If no images are found for the given search term.</li>
+        <li><code>{ "error": "Error message from the server" }</code> - If there is an issue with the request (e.g., API key error, network issues).</li>
+    </ul>
+
+    <p>For more details, refer to the <a href="https://pixabay.com/api/docs/">Pixabay API documentation</a>.</p>
+</body>
+</html>

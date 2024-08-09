@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <meta charset="UTF-8">
+        <title>Search for image</title>
+        <link href="/styles/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container"> 
+            
+            <%if (locals.data) { %>
+                <img src= <%=data %>  width="400" height="400" class="imgcontainer"/>
+            <% }else if (locals.error){ %>
+                <p> Sorry an error occured :- <%= error%>Pls try again</p>
+            <% }else{ %>
+                <p style="font-size: 30px;"> Type ?image=The image you want to search , in the url to search</p>
+            <%}%>
+              
+        </div>
+
+        <footer> ©2024-Revanth Kanna - Made for codechef VITC - All Rights Reserved </footer>
+    </body>
+
+
+</htm>

@@ -1,0 +1,31 @@
+html{
+    background-color: cadetblue;
+}
+
+.container{
+    display: flex;  
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+    gap:50px;
+    align-items: center;
+}
+
+.searchbox{
+    
+    width: 30vw;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+.searchbutton{
+    border: none;
+    border-radius: 2px;
+    height:25px;
+    color: white;
+    background-color: darkslategray;
+}
+
+.imgcontainer{
+    border-radius: 5px;
+}

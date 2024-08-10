@@ -11,6 +11,8 @@ const auth_key = "45305918-8389ed0e887031a171492320f";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'ejs'); 
+app.set('views', __dirname + '/views'); 
 
 app.get('/',(req,res)=>{
     res.render('document.ejs');
